@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Semangat Skripsi</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:linear-gradient(135deg,#cfe9ff,#e6f3ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card{
+  background:white;
+  width:90%;
+  max-width:500px;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  text-align:center;
+}
+
+h2{
+  color:#3b82f6;
+  margin-bottom:10px;
+}
+
+p{
+  color:#475569;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin:12px 0;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+  font-size:15px;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:#60a5fa;
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#3b82f6;
+}
+
+.hidden{
+  display:none;
+}
+
+.message{
+  font-size:16px;
+  line-height:1.7;
+  color:#1e3a8a;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SLIDE 1 -->
+<div class="card" id="slide1">
+  <h2>💙 Halo</h2>
+  <p>Masukkan kode</p>
+  <input type="password" id="kode" placeholder="Kode">
+  <button onclick="masuk()">Masuk</button>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="card hidden" id="slide2">
+  <h2>✨ Haii Ival</h2>
+  <p class="message">
+    Kalau hari ini kamu ngerasa capek, bingung, atau pengen nyerah,  
+    itu bukan tanda kamu lemah,  
+    tapi itu tanda kamu <b>sedang berjuang</b>.
+    <br><br>
+    Dan orang yang berjuang itu  
+    <b>pantas banget buat lulus dengan bangga</b>. 
+  </p>
+</div>
+
+<script>
+function masuk(){
+  const kode = document.getElementById("kode").value.trim();
+
+  if(kode !== "ival"){
+    alert("Kode salah");
+    return;
+  }
+
+  document.getElementById("slide1").classList.add("hidden");
+  document.getElementById("slide2").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
